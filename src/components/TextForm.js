@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 export default function TextForm(props) {
   const handleUpClick = () => {
+    props.showAlert("Converted to uppercase", "success");
     let newText = text.toUpperCase();
     setText(newText);
   };
@@ -12,6 +13,7 @@ export default function TextForm(props) {
   //use of steate always use 'setText' to update value of text
 
   const reversrText = () => {
+    props.showAlert("Text reversed", "success");
     let newText = text.split("").reverse().join("");
     setText(newText);
   };
